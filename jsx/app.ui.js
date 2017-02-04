@@ -23,6 +23,7 @@ console.log('location = ' + window.location.href);
     }
     else {
       dao.loadHome();
+      dao.loadLastPosts();
     }
 
     this.setState({dao: dao});
