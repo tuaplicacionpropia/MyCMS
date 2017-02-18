@@ -253,14 +253,12 @@ var ArticleUI = React.createClass({
     var numViews = null;
     var numViews = (numViews != null ? numViews : 0);
 
-
-
     return (
-        <div className="tc-ch business">
+        <div itemScope itemType="http://schema.org/Article" className="tc-ch business">
           <div className=" blog-grid2">
-            <img src={mainImage} className="img-responsive" alt="" />
+            <img itemProp="image" src={mainImage} className="img-responsive" alt="" />
             <div className="blog-text">
-              <h5>{title}</h5>
+              <h5 itemProp="name">{title}</h5>
               <span dangerouslySetInnerHTML={{__html: [contentHtml]}} />
           <div className="blog-poast-info">
             <ul>
