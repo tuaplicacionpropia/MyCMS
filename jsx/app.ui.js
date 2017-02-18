@@ -13,7 +13,7 @@ console.log('location = ' + window.location.href);
     if (paramsIdx > -1) {
       var option = href.substring(paramsIdx + 1);
       if (option.endsWith(".md")) {
-        dao.loadObject(option, "post2Open", function() {
+        dao.provPosts.load(option, "post2Open", function() {
           self._openPost(Article.createNew(self.state.post2Open));
         });
       }
