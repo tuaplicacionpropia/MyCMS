@@ -9,16 +9,17 @@ console.log('location = ' + window.location.href);
 //file:///home/jmramoss/almacen/webtuaplicacionpropia/index.html?javascript/intro_reactjs.md
 //file:///home/jmramoss/almacen/webtuaplicacionpropia/index.html?www/github_api_rest.md
     var href = window.location.href;
-    var paramsIdx = href.indexOf("?");
-    if (paramsIdx > -1) {
-      var option = href.substring(paramsIdx + 1);
-      if (option.endsWith(".md")) {
-        dao.provPosts.load(option, "post2Open", function() {
+
+    var params = Utils.getParamsGET();
+    var inputPost = params['post'];
+    if (inputPost != null && inputPost.length > 0) {
+      if (inputPost.endsWith(".md")) {
+        dao.provPosts.load(inputPost, "post2Open", function() {
           self._openPost(Article.createNew(self.state.post2Open));
         });
       }
       else {
-        dao.selectMenu(option);
+        dao.selectMenu(inputPost);
       }
     }
     else {
