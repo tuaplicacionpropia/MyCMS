@@ -1,1 +1,5 @@
 https://w3layouts.com/business-blog-a-blogging-category-flat-bootstrap-responsive-web-template/
+
+babel -w jsx --presets react --out-dir ../webtuaplicacionpropia/components/
+
+
