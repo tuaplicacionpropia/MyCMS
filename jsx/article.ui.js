@@ -84,7 +84,7 @@ var ArticleUI = React.createClass({
         <div className="soci">
           <ul>
             <li><a href="#" className="facebook-1"> </a></li>
-            <li><a href="#" className="facebook-1 twitter"> </a></li>
+            <li><a href="https://plus.google.com/share?url=YOUR_URL_HERE" className="facebook-1 twitter" target="_blank"> </a></li>
             <li><a href="#" className="facebook-1 chrome"> </a></li>
             <li><a href="#"><i className="glyphicon glyphicon-envelope"> </i></a></li>
             <li><a href="#"><i className="glyphicon glyphicon-print"> </i></a></li>
