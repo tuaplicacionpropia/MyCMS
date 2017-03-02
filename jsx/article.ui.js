@@ -79,12 +79,20 @@ var ArticleUI = React.createClass({
     var numViews = null;
     var numViews = (numViews != null ? numViews : 0);
 
+    var postId = article.getId();
+    var postId = (postId != null ? postId : "");
+
+    var baseurl = "http://tuaplicacionpropia.com/social/";
+    var basepostId = postId.substring(0, postId.lastIndexOf(".")) + ".html";
+    var gplusUrl = "https://plus.google.com/share?url=" + baseurl + basepostId;
+
+
     return (
 <span>
         <div className="soci">
           <ul>
             <li><a href="#" className="facebook-1"> </a></li>
-            <li><a href="https://plus.google.com/share?url=YOUR_URL_HERE" className="facebook-1 twitter" target="_blank"> </a></li>
+            <li><a href={gplusUrl} className="facebook-1 twitter" target="_blank"> </a></li>
             <li><a href="#" className="facebook-1 chrome"> </a></li>
             <li><a href="#"><i className="glyphicon glyphicon-envelope"> </i></a></li>
             <li><a href="#"><i className="glyphicon glyphicon-print"> </i></a></li>
